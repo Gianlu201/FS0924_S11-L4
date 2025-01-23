@@ -1,0 +1,17 @@
+.article-title,
+.article-summary {
+  display: -webkit-box;
+  -webkit-box-direction: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.article-summary {
+  -webkit-line-clamp: 4;
+}
+
+.article-pulication {
+  position: absolute;
+  bottom: 16px;
+}

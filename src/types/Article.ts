@@ -10,15 +10,29 @@ export interface Article {
   updated_at: Date;
   featured: boolean;
   launches: Launch[];
-  events: string[];
+  events: Event[];
 }
 
 export interface Author {
   name: string;
-  socials: null;
+  socials: Socials;
 }
 
 export interface Launch {
   launch_id: string;
   provider: string;
+}
+
+export interface Event {
+  event_id: number;
+  provider: string;
+}
+
+export interface Socials {
+  x: string;
+  youtube: string;
+  instagram: string;
+  linkedin: string;
+  mastodon: string;
+  bluesky: string;
 }
