@@ -22,7 +22,7 @@ const ArticleDetail = () => {
       }
     } catch (error) {
       console.log(error);
-      setErrorMessage(error.message);
+      setErrorMessage((error as Error).message);
     }
   };
 

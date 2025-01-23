@@ -10,6 +10,8 @@ const ArticlesList = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const getArticles = async () => {
+    setErrorMessage('');
+    setArticles([]);
     try {
       const response = await fetch(URL);
       if (response.ok) {
@@ -20,7 +22,7 @@ const ArticlesList = () => {
       }
     } catch (error) {
       console.log(error);
-      setErrorMessage(error.message);
+      setErrorMessage((error as Error).message);
     }
   };
 
